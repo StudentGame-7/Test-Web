@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | ข้อมูลส่วนตัว</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Google Fonts (Prompt) -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            color: #333;
+        }
+        
+        /* Hero Section Styling */
+        .hero-section {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Section Titles */
+        .section-title {
+            position: relative;
+            margin-bottom: 40px;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .section-title::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background-color: #00f2fe;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Card Hover Effect */
+        .portfolio-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #212529;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbarNav">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">MyProfile.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">หน้าแรก</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">เกี่ยวกับฉัน</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">ทักษะความสามารถ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">ผลงาน</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">ติดต่อ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <!-- ใส่รูปภาพของคุณที่นี่โดยเปลี่ยน URL ตรง src -->
+            <img src="https://ui-avatars.com/api/?name=Your+Name&size=200&background=random&color=fff" alt="Profile Picture" class="profile-img">
+            <h1 class="display-4 fw-bold">สวัสดีครับ, ผม [ชื่อ-นามสกุล]</h1>
+            <p class="lead mb-4">Web Developer & Graphic Designer</p>
+            <a href="#contact" class="btn btn-light btn-lg rounded-pill px-4 shadow-sm">ติดต่อฉันเลย</a>
+            <a href="#portfolio" class="btn btn-outline-light btn-lg rounded-pill px-4 ms-2">ดูผลงาน</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container py-4">
+            <h2 class="section-title">เกี่ยวกับฉัน</h2>
+            <div class="row align-items-center mt-5">
+                <div class="col-md-6 mb-4 mb-md-0 text-center">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Workspace" class="img-fluid rounded-4 shadow">
+                </div>
+                <div class="col-md-6">
+                    <h3 class="fw-bold mb-3">ผมเป็นนักพัฒนาเว็บไซต์ที่หลงใหลในงานออกแบบ</h3>
+                    <p class="text-muted">
+                        ผมมีประสบการณ์ในการพัฒนาเว็บไซต์มามากกว่า 3 ปี มีความเชี่ยวชาญในการออกแบบ UI/UX ให้ใช้งานง่าย 
+                        และเขียนโค้ดที่สะอาดตาและมีประสิทธิภาพ เป้าหมายของผมคือการสร้างสรรค์ผลงานที่ตอบโจทย์ธุรกิจและผู้ใช้งานให้ได้มากที่สุด
+                    </p>
+                    <ul class="list-unstyled text-muted mt-4">
+                        <li class="mb-2"><i class="bi bi-person-fill text-primary me-2"></i> <strong>ชื่อ:</strong> นายชื่อจริง นามสกุล</li>
+                        <li class="mb-2"><i class="bi bi-envelope-fill text-primary me-2"></i> <strong>อีเมล:</strong> email@example.com</li>
+                        <li class="mb-2"><i class="bi bi-telephone-fill text-primary me-2"></i> <strong>เบอร์โทร:</strong> 081-234-5678</li>
+                        <li class="mb-2"><i class="bi bi-geo-alt-fill text-primary me-2"></i> <strong>ที่อยู่:</strong> กรุงเทพมหานคร, ประเทศไทย</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container py-4">
+            <h2 class="section-title">ทักษะความสามารถ</h2>
+            <div class="row mt-5">
+                <div class="col-md-6 mb-4">
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>HTML / CSS</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>JavaScript</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>Bootstrap / Tailwind</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>UI/UX Design (Figma)</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>Photoshop / Illustrator</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="progress" style="height: 10px;">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-5">
+        <div class="container py-4">
+            <h2 class="section-title">ผลงานของฉัน</h2>
+            <div class="row mt-5">
+                <!-- Portfolio Item 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card portfolio-card shadow-sm h-100">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">E-Commerce Website</h5>
+                            <p class="card-text text-muted">ออกแบบและพัฒนาเว็บไซต์ขายของออนไลน์ ด้วยระบบจัดการตะกร้าสินค้าที่ทันสมัย</p>
+                            <span class="badge bg-light text-dark border">HTML</span>
+                            <span class="badge bg-light text-dark border">CSS</span>
+                            <span class="badge bg-light text-dark border">JS</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Item 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card portfolio-card shadow-sm h-100">
+                        <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Dashboard Admin App</h5>
+                            <p class="card-text text-muted">ระบบจัดการหลังบ้านสำหรับสรุปข้อมูล Data Analytics และกราฟสถิติต่างๆ</p>
+                            <span class="badge bg-light text-dark border">Bootstrap 5</span>
+                            <span class="badge bg-light text-dark border">Chart.js</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio Item 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card portfolio-card shadow-sm h-100">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Mobile App UI Design</h5>
+                            <p class="card-text text-muted">ออกแบบ User Interface สำหรับแอปพลิเคชันจองที่พักและโรงแรม (Figma)</p>
+                            <span class="badge bg-light text-dark border">Figma</span>
+                            <span class="badge bg-light text-dark border">UX/UI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container py-4">
+            <h2 class="section-title">ติดต่อฉัน</h2>
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-8 text-center mb-4">
+                    <p class="lead text-muted">หากคุณสนใจร่วมงานกับผม หรือมีคำถามใดๆ สามารถส่งข้อความถึงผมได้ทันทีครับ</p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <div class="d-flex justify-content-center gap-4 mb-4">
+                        <a href="#" class="fs-2 text-dark"><i class="bi bi-github"></i></a>
+                        <a href="#" class="fs-2 text-primary"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="fs-2 text-info"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="fs-2 text-danger"><i class="bi bi-envelope"></i></a>
+                    </div>
+                    <a href="mailto:email@example.com" class="btn btn-primary btn-lg rounded-pill px-5 shadow-sm">ส่งอีเมลหาฉัน</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 MyProfile. All Rights Reserved. Designed by [ชื่อของคุณ]</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle (with Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>
